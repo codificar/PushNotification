@@ -1,5 +1,5 @@
 {
-    "name": "edujugon/push-notification",
+    "name": "codificar/push-notificationfcm",
     "description": "Laravel Package to send push notifications to Android and IOS devices. (GCM,FCM,APN)",
     "keywords": [
         "Laravel",
@@ -34,16 +34,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Edujugon\\PushNotification\\": "src/"
+            "Codificar\\PushNotificationFcm\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Edujugon\\PushNotification\\Providers\\PushNotificationServiceProvider"
+                "Codificar\\PushNotificationFcm\\Providers\\PushNotificationServiceProvider"
             ],
             "aliases": {
-                "PushNotification": "Edujugon\\PushNotification\\Facades\\PushNotification"
+                "PushNotificationFcm": "Codificar\\PushNotificationFcm\\Facades\\PushNotification"
             }
         }
     }
