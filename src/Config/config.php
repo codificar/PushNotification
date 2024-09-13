@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @see https://github.com/Edujugon/PushNotification
+ * @see https://github.com/Codificar/PushNotification
  */
 
 return [

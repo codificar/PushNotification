@@ -1,6 +1,6 @@
 <?php
 
-namespace Edujugon\PushNotification\Messages;
+namespace Codificar\PushNotification\Messages;
 
 class PushMessage
 {

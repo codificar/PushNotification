@@ -1,9 +1,9 @@
 <?php
 
-namespace Edujugon\PushNotification;
+namespace Codificar\PushNotification;
 
 use Carbon\Carbon;
-use Edujugon\PushNotification\Fcm;
+use Codificar\PushNotification\Fcm;
 use Exception;
 use Google\Client as GoogleClient;
 use Google\Service\FirebaseCloudMessaging;

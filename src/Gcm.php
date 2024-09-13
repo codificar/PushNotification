@@ -1,7 +1,7 @@
 <?php
-namespace Edujugon\PushNotification;
+namespace Codificar\PushNotification;
 
-use Edujugon\PushNotification\Contracts\PushServiceInterface;
+use Codificar\PushNotification\Contracts\PushServiceInterface;
 use GuzzleHttp\Client;
 
 class Gcm extends PushService implements PushServiceInterface

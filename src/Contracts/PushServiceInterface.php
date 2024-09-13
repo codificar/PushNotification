@@ -1,5 +1,5 @@
 <?php
-namespace Edujugon\PushNotification\Contracts;
+namespace Codificar\PushNotification\Contracts;
 
 interface PushServiceInterface
 {
