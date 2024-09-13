@@ -1,22 +1,22 @@
 <?php
-namespace Codificar\PushNotification\Channels;
+namespace Codificar\PushNotificationFcm\Channels;
 
-use Codificar\PushNotification\Events\NotificationPushed;
-use Codificar\PushNotification\Messages\PushMessage;
-use Codificar\PushNotification\PushNotification;
+use Codificar\PushNotificationFcm\Events\NotificationPushed;
+use Codificar\PushNotificationFcm\Messages\PushMessage;
+use Codificar\PushNotificationFcm\PushNotification;
 use Illuminate\Notifications\Notification;
 
 abstract class PushChannel
 {
     /**
-     * @var \Codificar\PushNotification\PushNotification
+     * @var \Codificar\PushNotificationFcm\PushNotification
      */
     protected $push;
 
     /**
      * Create a new Apn channel instance.
      *
-     * @param  \Codificar\PushNotification\PushNotification $push
+     * @param  \Codificar\PushNotificationFcm\PushNotification $push
      */
     public function __construct(PushNotification $push)
     {
@@ -49,7 +49,7 @@ abstract class PushChannel
      * @param  string $service
      * @param  mixed $to
      * @param  array $data
-     * @param  \Codificar\PushNotification\Messages\PushMessage $message
+     * @param  \Codificar\PushNotificationFcm\Messages\PushMessage $message
      * @return mixed
      */
     protected function push($service, $to, $data, PushMessage $message)
@@ -79,7 +79,7 @@ abstract class PushChannel
      *
      * @param  mixed $notifiable
      * @param  \Illuminate\Notifications\Notification  $notification
-     * @return \Codificar\PushNotification\Messages\PushMessage
+     * @return \Codificar\PushNotificationFcm\Messages\PushMessage
      */
     protected function buildMessage($notifiable, Notification $notification)
     {
@@ -115,7 +115,7 @@ abstract class PushChannel
     /**
      * Build the push payload data.
      *
-     * @param  \Codificar\PushNotification\Messages\PushMessage $message
+     * @param  \Codificar\PushNotificationFcm\Messages\PushMessage $message
      * @return array
      */
     abstract protected function buildData(PushMessage $message);

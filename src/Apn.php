@@ -1,7 +1,7 @@
 <?php
-namespace Codificar\PushNotification;
+namespace Codificar\PushNotificationFcm;
 
-use Codificar\PushNotification\Contracts\PushServiceInterface;
+use Codificar\PushNotificationFcm\Contracts\PushServiceInterface;
 use Illuminate\Support\Arr;
 
 class Apn extends PushService implements PushServiceInterface

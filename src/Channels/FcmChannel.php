@@ -1,6 +1,6 @@
 <?php
 
-namespace Codificar\PushNotification\Channels;
+namespace Codificar\PushNotificationFcm\Channels;
 
 class FcmChannel extends GcmChannel
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Codificar\PushNotification;
+namespace Codificar\PushNotificationFcm;
 
-use Codificar\PushNotification\Exceptions\PushNotificationException;
+use Codificar\PushNotificationFcm\Exceptions\PushNotificationException;
 
 abstract class PushService
 {

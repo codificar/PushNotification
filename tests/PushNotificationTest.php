@@ -2,7 +2,7 @@
 
 
 use PHPUnit\Framework\TestCase;
-use Edujugon\PushNotification\PushNotification;
+use Codificar\PushNotificationFcm\PushNotification;
 use Illuminate\Support\Arr;
 
 class PushNotificationTest extends TestCase {
@@ -12,7 +12,7 @@ class PushNotificationTest extends TestCase {
     {
         $push = new PushNotification();
 
-        $this->assertInstanceOf('Edujugon\PushNotification\Gcm', $push->service);
+        $this->assertInstanceOf('Codificar\PushNotificationFcm\Gcm', $push->service);
     }
 
     /** @test */
@@ -157,7 +157,7 @@ class PushNotificationTest extends TestCase {
     {
         $push = new PushNotification('asdf');
 
-        $this->assertInstanceOf('Edujugon\PushNotification\Gcm', $push->service);
+        $this->assertInstanceOf('Codificar\PushNotificationFcm\Gcm', $push->service);
     }
 
     /** @test */
@@ -174,10 +174,10 @@ class PushNotificationTest extends TestCase {
         $push = new PushNotification();
 
         $push->setService('asdf')->send();
-        $this->assertInstanceOf('Edujugon\PushNotification\Gcm', $push->service);
+        $this->assertInstanceOf('Codificar\PushNotificationFcm\Gcm', $push->service);
 
         $push->setService('fcm');
-        $this->assertInstanceOf('Edujugon\PushNotification\Fcm', $push->service);
+        $this->assertInstanceOf('Codificar\PushNotificationFcm\Fcm', $push->service);
     }
 
     /** @test */

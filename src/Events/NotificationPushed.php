@@ -1,8 +1,8 @@
 <?php
 
-namespace Codificar\PushNotification\Events;
+namespace Codificar\PushNotificationFcm\Events;
 
-use Codificar\PushNotification\PushNotification;
+use Codificar\PushNotificationFcm\PushNotification;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
@@ -12,14 +12,14 @@ class NotificationPushed
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
-     * @var \Codificar\PushNotification\PushNotification
+     * @var \Codificar\PushNotificationFcm\PushNotification
      */
     public $push;
 
     /**
      * Create a new event instance.
      *
-     * @param  \Codificar\PushNotification\PushNotification $push
+     * @param  \Codificar\PushNotificationFcm\PushNotification $push
      */
     public function __construct(PushNotification $push)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Codificar\PushNotification\Messages;
+namespace Codificar\PushNotificationFcm\Messages;
 
 class PushMessage
 {

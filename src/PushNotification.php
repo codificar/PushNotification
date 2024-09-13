@@ -1,5 +1,5 @@
 <?php
-namespace Codificar\PushNotification;
+namespace Codificar\PushNotificationFcm;
 
 class PushNotification
 {

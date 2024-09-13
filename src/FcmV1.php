@@ -1,9 +1,9 @@
 <?php
 
-namespace Codificar\PushNotification;
+namespace Codificar\PushNotificationFcm;
 
 use Carbon\Carbon;
-use Codificar\PushNotification\Fcm;
+use Codificar\PushNotificationFcm\Fcm;
 use Exception;
 use Google\Client as GoogleClient;
 use Google\Service\FirebaseCloudMessaging;

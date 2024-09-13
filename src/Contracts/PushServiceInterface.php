@@ -1,5 +1,5 @@
 <?php
-namespace Codificar\PushNotification\Contracts;
+namespace Codificar\PushNotificationFcm\Contracts;
 
 interface PushServiceInterface
 {

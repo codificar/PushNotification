@@ -1,8 +1,8 @@
 <?php
 
-namespace Codificar\PushNotification\Channels;
+namespace Codificar\PushNotificationFcm\Channels;
 
-use Codificar\PushNotification\Messages\PushMessage;
+use Codificar\PushNotificationFcm\Messages\PushMessage;
 
 class ApnChannel extends PushChannel
 {
