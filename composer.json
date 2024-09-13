@@ -13,15 +13,9 @@
     ],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/Edujugon/PushNotification/issues",
-        "source": "https://github.com/Edujugon/PushNotification"
+        "issues": "https://github.com/codificar/PushNotification/issues",
+        "source": "https://github.com/codificar/PushNotification"
     },
-    "authors": [
-        {
-            "name": "Eduardo Marcos",
-            "email": "edujugon@gmail.com"
-        }
-    ],
     "require": {
         "php": "^7.1.3 || ^8.0",
         "guzzlehttp/guzzle": "^6.3 || ^7.0.1",
