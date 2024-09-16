@@ -2,6 +2,7 @@
 namespace Codificar\PushNotificationFcm;
 
 use Codificar\PushNotificationFcm\Exceptions\PushNotificationException;
+use Illuminate\Support\Facades\Log;
 
 abstract class PushService
 {
@@ -75,8 +76,22 @@ abstract class PushService
         if (!array_key_exists($service, $configuration)) {
             throw new PushNotificationException("Service '$service' missed in config/pushnotification.php");
         }
+        
+        if ($service === 'fcmv1') {
+            $jsonFilePath = storage_path(env('FCM_SERVICE_ACCOUNT_PATH'));
+            Log::info("Verificando caminho do arquivo JSON: " . $jsonFilePath);
+
+            if (file_exists($jsonFilePath)) {
+                $jsonData = json_decode(file_get_contents($jsonFilePath), true);
+                $configuration[$service]['projectId'] = $jsonData['project_id']; 
+                $configuration[$service]['jsonFile'] = $jsonFilePath;
+            } else {
+                throw new PushNotificationException("Arquivo JSON do Firebase não encontrado em: $jsonFilePath");
+            }
+        }
         return $configuration[$service];
     }
+
 
     /**
      * Initialize the feedback array
