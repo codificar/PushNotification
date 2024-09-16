@@ -78,7 +78,7 @@ abstract class PushService
         }
         
         if ($service === 'fcmv1') {
-            $jsonFilePath = storage_path(config('services.firebase.service_account_path'));
+            $jsonFilePath = storage_path('rad-app-426918-firebase-adminsdk-sp561-0d017622a0.json');
             Log::info("Verificando caminho do arquivo JSON: " . $jsonFilePath);
 
             if (file_exists($jsonFilePath)) {
