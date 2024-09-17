@@ -3,6 +3,7 @@ namespace Codificar\PushNotificationFcm;
 
 use Codificar\PushNotificationFcm\Exceptions\PushNotificationException;
 use Illuminate\Support\Facades\Log;
+use Settings;
 
 abstract class PushService
 {
@@ -78,8 +79,7 @@ abstract class PushService
         }
         
         if ($service === 'fcmv1') {
-            Log::info("tentando recuperar variavel de env" . env('FCM_SERVICE_ACCOUNT_PATH'));
-            $jsonFilePath = storage_path(env('FCM_SERVICE_ACCOUNT_PATH'));
+            $jsonFilePath = Settings::where('key', 'json_file_path')->pluck('value')->first();
             Log::info("Verificando caminho do arquivo JSON: " . $jsonFilePath);
 
             if (file_exists($jsonFilePath)) {
