@@ -78,6 +78,7 @@ abstract class PushService
         }
         
         if ($service === 'fcmv1') {
+            Log::info("tentando recuperar variavel de env" . env('FCM_SERVICE_ACCOUNT_PATH'));
             $jsonFilePath = storage_path(env('FCM_SERVICE_ACCOUNT_PATH'));
             Log::info("Verificando caminho do arquivo JSON: " . $jsonFilePath);
 
