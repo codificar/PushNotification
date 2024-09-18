@@ -1,4 +1,4 @@
-<?php namespace Edujugon\PushNotification\Facades;
+<?php namespace Codificar\PushNotificationFcm\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

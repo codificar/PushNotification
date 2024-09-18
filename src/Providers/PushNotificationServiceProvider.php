@@ -1,8 +1,8 @@
 <?php
 
-namespace Edujugon\PushNotification\Providers;
+namespace Codificar\PushNotificationFcm\Providers;
 
-use Edujugon\PushNotification\PushNotification;
+use Codificar\PushNotificationFcm\PushNotification;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 

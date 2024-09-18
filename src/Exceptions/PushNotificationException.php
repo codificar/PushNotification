@@ -1,5 +1,5 @@
 <?php
-namespace Edujugon\PushNotification\Exceptions;
+namespace Codificar\PushNotificationFcm\Exceptions;
 
 class PushNotificationException extends \Exception
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Edujugon\PushNotification;
+namespace Codificar\PushNotificationFcm;
 
 use GuzzleHttp\Client;
 

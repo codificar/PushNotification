@@ -1,7 +1,9 @@
 <?php
-namespace Edujugon\PushNotification;
+namespace Codificar\PushNotificationFcm;
 
-use Edujugon\PushNotification\Exceptions\PushNotificationException;
+use Codificar\PushNotificationFcm\Exceptions\PushNotificationException;
+use Illuminate\Support\Facades\Log;
+use Settings;
 
 abstract class PushService
 {
@@ -75,8 +77,22 @@ abstract class PushService
         if (!array_key_exists($service, $configuration)) {
             throw new PushNotificationException("Service '$service' missed in config/pushnotification.php");
         }
+        
+        if ($service === 'fcmv1') {
+            $jsonFilePath = Settings::where('key', 'json_file_path')->pluck('value')->first();
+            Log::info("Verificando caminho do arquivo JSON: " . $jsonFilePath);
+
+            if (file_exists($jsonFilePath)) {
+                $jsonData = json_decode(file_get_contents($jsonFilePath), true);
+                $configuration[$service]['projectId'] = $jsonData['project_id']; 
+                $configuration[$service]['jsonFile'] = $jsonFilePath;
+            } else {
+                throw new PushNotificationException("Arquivo JSON do Firebase não encontrado em: $jsonFilePath");
+            }
+        }
         return $configuration[$service];
     }
+
 
     /**
      * Initialize the feedback array
